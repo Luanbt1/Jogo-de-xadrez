@@ -1,10 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Tabuleiro;
+﻿// See https://aka.ms/new-console-template for more informatio
+using tabuleiro;
+
+Tabuleiro tab = new Tabuleiro(8,8);
 
 
-Posicao p = new(3, 4);
-
-
-
-Console.WriteLine(p);
-
+Console.WriteLine(tab);
