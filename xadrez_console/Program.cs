@@ -3,10 +3,21 @@ using tabuleiro;
 using xadrez_console;
 using xadrez;
 
-PosicaoXadrez pos = new PosicaoXadrez('c' , 7);
+try
+{
+    Tabuleiro tab = new Tabuleiro(8, 8);
 
-Console.WriteLine(pos);
+    tab.colocarPeca(new Torre(tab,Cor.Preta), new Posicao(0, 0));
+    tab.colocarPeca(new Rei(tab,Cor.Preta), new Posicao(5, 5));
+    tab.colocarPeca(new Torre(tab,Cor.Branca), new Posicao(4, 4));
+    tab.colocarPeca(new Rei(tab,Cor.Branca), new Posicao(6, 6));
+    
+    Tela.imprimirTabuleiro(tab);
 
-Console.WriteLine(pos.toPosicao());
+
+}catch(TabuleiroException e)
+{
+    Console.WriteLine(e.Message);
+}
 
 Console.ReadLine();
