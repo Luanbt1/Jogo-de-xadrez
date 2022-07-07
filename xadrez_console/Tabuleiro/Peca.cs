@@ -3,7 +3,7 @@
 
 namespace tabuleiro
 {
-    internal class Peca
+    internal abstract class Peca
     {
 
         public Posicao posicao { get; set; }
@@ -20,6 +20,9 @@ namespace tabuleiro
             this.tab = tab;
             qteMovimentos = 0;
         }
+
+
+        public abstract bool[,] movimentosPossiveis();
 
 
 
