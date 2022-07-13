@@ -40,7 +40,8 @@ try
         }
     }
 
-
+    Console.Clear();
+    Tela.imprimirPartida(partida); 
 
 
 }catch(TabuleiroException e)
